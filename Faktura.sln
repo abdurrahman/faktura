@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{460C3ACA-16E5-49C4-9FD4-A7E541B2CDC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faktura.WepApi", "src\Faktura.WepApi\Faktura.WepApi.csproj", "{91063E8A-CF55-4110-B0E0-A638D1962169}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Faktura.Domain", "src\Faktura.Domain\Faktura.Domain.csproj", "{DD20EFA3-272A-4F76-B5C9-1853A2A2C5B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91063E8A-CF55-4110-B0E0-A638D1962169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91063E8A-CF55-4110-B0E0-A638D1962169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91063E8A-CF55-4110-B0E0-A638D1962169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91063E8A-CF55-4110-B0E0-A638D1962169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD20EFA3-272A-4F76-B5C9-1853A2A2C5B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD20EFA3-272A-4F76-B5C9-1853A2A2C5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD20EFA3-272A-4F76-B5C9-1853A2A2C5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD20EFA3-272A-4F76-B5C9-1853A2A2C5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91063E8A-CF55-4110-B0E0-A638D1962169} = {460C3ACA-16E5-49C4-9FD4-A7E541B2CDC1}
+		{DD20EFA3-272A-4F76-B5C9-1853A2A2C5B4} = {460C3ACA-16E5-49C4-9FD4-A7E541B2CDC1}
+	EndGlobalSection
+EndGlobal
