@@ -1,6 +1,6 @@
 # Faktura Web API
 
-Faktura is a RESTful api that provide inquiry invoices and create new invoice.
+Faktura is a RESTful API that provides querying invoices and creates new invoices.
 
 ## Installation
 
