@@ -8,7 +8,7 @@ namespace Faktura.WepApi.Controllers
     public class BaseController : ControllerBase
     {
         public string UserId => GetAuthenticatedUserId();
-        
+
         /// <summary>
         /// Get user id info from user claim
         /// </summary>

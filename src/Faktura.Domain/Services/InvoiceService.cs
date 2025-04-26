@@ -18,7 +18,7 @@ namespace Faktura.Domain.Services
         private readonly LikvidoConfig _likvidoConfig;
         private readonly AsyncRetryPolicy _retryPolicy;
 
-        public InvoiceService(IOptions<LikvidoConfig> options, 
+        public InvoiceService(IOptions<LikvidoConfig> options,
             ILogger<InvoiceService> logger)
         {
             _logger = logger;
@@ -33,7 +33,7 @@ namespace Faktura.Domain.Services
                     return nextAttemptIn;
                 });
         }
-        
+
         public async Task<CreateInvoiceResponseModel> CreateInvoice(CreateInvoiceRequestModel model)
         {
             try
@@ -46,7 +46,7 @@ namespace Faktura.Domain.Services
                         .PostJsonAsync(model)
                         .ReceiveJson<CreateInvoiceResponseModel>()
                 );
-            
+
                 return response;
             }
             catch (FlurlHttpException ex)
@@ -68,7 +68,7 @@ namespace Faktura.Domain.Services
                         .SetQueryParams(model)
                         .GetJsonAsync<GetInvoicesResponseModel>()
                 );
-                
+
                 return response;
             }
             catch (FlurlHttpException ex)

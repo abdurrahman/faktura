@@ -23,21 +23,22 @@ namespace Faktura.WepApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            
+
             // Add functionality to inject IOptions<T>
             services.AddOptions();
             services.Configure<LikvidoConfig>(Configuration.GetSection(nameof(LikvidoConfig)));
-            
+
             // Configure DI for application services
             services.AddScoped<IInvoiceService, InvoiceService>();
-            
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
-                { 
-                    Title = "Faktura Invoice Service", Version = "v1",
+                {
+                    Title = "Faktura Invoice Service",
+                    Version = "v1",
                     License = new OpenApiLicense
-                        {Name = "MIT", Url = new Uri("https://github.com/abdurrahman/faktura/blob/master/LICENSE")}
+                    { Name = "MIT", Url = new Uri("https://github.com/abdurrahman/faktura/blob/master/LICENSE") }
                 });
             });
         }
@@ -57,7 +58,7 @@ namespace Faktura.WepApi
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-            
+
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Faktura.WepApi v1"));
         }

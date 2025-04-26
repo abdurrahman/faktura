@@ -18,7 +18,7 @@ namespace Faktura.Domain.Services
         /// </summary>
         /// <returns>IList&lt;GetInvoicesResponseModel&gt;</returns>
         Task<GetInvoicesResponseModel> GetInvoices(GetInvoicesFilterRequestModel model);
-        
+
         /// <summary>
         /// Get a single invoice record by invoice id. 
         /// </summary>

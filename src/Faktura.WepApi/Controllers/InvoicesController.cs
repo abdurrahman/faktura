@@ -9,18 +9,18 @@ namespace Faktura.WepApi.Controllers
     public class InvoicesController : BaseController
     {
         private readonly IInvoiceService _invoiceService;
-        
+
         public InvoicesController(IInvoiceService invoiceService)
         {
             _invoiceService = invoiceService;
         }
-        
+
         // GET api/Invoices
         [HttpGet]
         public async Task<IActionResult> GetInvoices([FromQuery] GetInvoicesFilterRequestModel model)
         {
             var result = await _invoiceService.GetInvoices(model);
-            
+
             return Ok(result);
         }
 
@@ -32,7 +32,7 @@ namespace Faktura.WepApi.Controllers
             var result = await _invoiceService.GetInvoiceById(id.ToString());
             return Ok(result);
         }
-        
+
         // POST api/Invoices
         [HttpPost]
         public async Task<IActionResult> AddInvoice([FromBody] CreateInvoiceRequestModel model)
