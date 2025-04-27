@@ -105,7 +105,7 @@ Response Body (400 Bad Request):
 
 ## Built with
 
-* C#, .NET 5.0
+* C#, .NET 9.0
 * Polly
 * Swagger
 
